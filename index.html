@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -115,40 +115,48 @@
               <h2>Websites designed to feel premium and convert.</h2>
             </div>
 
-            <div class="project-grid">
-              <article class="project-card reveal">
-                <div class="project-screenshot card-photo photo-naturasi">
-                  <div class="project-label">Manufacturing</div>
-                </div>
-                <div class="project-info">
+            <div class="project-list">
+              <article class="project-row reveal" tabindex="0" role="button"
+                data-title="NaturasiMIS"
+                data-category="Manufacturing"
+                data-status="Capstone Project"
+                data-tools="Laravel, MySQL, Blade"
+                data-description="Naturasi, a cheese manufacturer in Silang, Cavite, was running their entire operation on handwritten logs and spreadsheets. I designed and built a web-based system that centralizes inventory, tracks production batches in real time, and predicts when materials need restocking — replacing scattered paperwork with a live dashboard."
+                data-image="assets/Dashboard.png"
+                data-url="">
+                <div class="project-row-media card-photo photo-naturasi"></div>
+                <div class="project-row-info">
+                  <p class="project-row-label">[ Manufacturing ]</p>
                   <h3>NaturasiMIS</h3>
                   <p>Replaced handwritten logs and spreadsheets with a real-time inventory, batch tracking, and predictive restocking system for a local cheese manufacturer.</p>
                 </div>
+                <span class="project-row-stamp">Shipped</span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
               </article>
 
-              <article class="project-card reveal">
-                <div class="project-screenshot card-photo photo-landscape">
-                  <div class="project-label">Landscaping</div>
-                </div>
-                <div class="project-info">
+              <article class="project-row reveal">
+                <div class="project-row-media card-photo photo-landscape"></div>
+                <div class="project-row-info">
+                  <p class="project-row-label">[ Landscaping ]</p>
                   <h3>Maple &amp; Pine</h3>
                   <p>Introduced a cleaner service structure and stronger lead capture for a local lawn care team.</p>
                 </div>
+                <span class="project-row-stamp">Shipped</span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
               </article>
 
-              <article class="project-card reveal">
-                <div class="project-screenshot before-after">
-                  <div class="before">
-                    <span>Before</span>
-                  </div>
-                  <div class="after">
-                    <span>After</span>
-                  </div>
+              <article class="project-row reveal">
+                <div class="project-row-media before-after">
+                  <div class="before"><span>Before</span></div>
+                  <div class="after"><span>After</span></div>
                 </div>
-                <div class="project-info">
+                <div class="project-row-info">
+                  <p class="project-row-label">[ Hospitality ]</p>
                   <h3>North Street Salon</h3>
                   <p>Updated a dated booking page into an elevated brand experience built for mobile browsing.</p>
                 </div>
+                <span class="project-row-stamp">Shipped</span>
+                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
               </article>
             </div>
           </div>
@@ -240,6 +248,43 @@
           </div>
         </section>
       </main>
+
+      <div id="projectModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-card modal-card-split" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <button type="button" class="modal-close" id="modalClose" aria-label="Close project details">&times;</button>
+
+          <div class="modal-split-screenshot">
+            <img id="modalImage" src="" alt="" />
+          </div>
+
+          <div class="modal-split-info">
+            <div class="modal-split-brand">
+              <img src="assets/Naturasi-MIS-Logo.png" alt="" class="modal-split-logo" />
+              <div>
+                <h3 id="modalTitle"></h3>
+                <p class="modal-split-subtitle" id="modalSubtitle">Manufacturing MIS</p>
+              </div>
+            </div>
+
+            <p class="modal-description" id="modalDescription"></p>
+
+            <div class="modal-meta modal-meta-split">
+              <div>
+                <span class="modal-meta-label">Type</span>
+                <span id="modalStatus"></span>
+              </div>
+              <div>
+                <span class="modal-meta-label">Stack</span>
+                <span id="modalTools"></span>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <a id="modalLiveLink" class="button button-primary" href="#" target="_blank" rel="noopener">Live Preview ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <footer class="site-footer">
         <div class="container footer-wrap">

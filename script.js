@@ -28,12 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
-      // compute a small stagger based on index (clamped)
       const idx = Math.max(0, revealEls.indexOf(el));
       const delay = Math.min(idx * 70, 420);
       el.style.transitionDelay = `${delay}ms`;
       el.classList.add('in-view');
       observer.unobserve(el);
+
+      window.setTimeout(() => {
+        el.style.transitionDelay = '';
+      }, delay + 900);
     });
   }, { threshold: 0.12 });
 
@@ -47,7 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function applyTheme(theme) {
     const isDark = theme === 'dark';
-    // set both class and attribute for compatibility with different CSS approaches
+
+    // Apply a top-to-bottom stagger across major sections
+    const waveTargets = document.querySelectorAll(
+      '.site-header, .hero, #work, #benefits, #pricing, #contact, .site-footer'
+    );
+    waveTargets.forEach((el, i) => {
+      el.classList.remove(
+        'theme-wave-0', 'theme-wave-1', 'theme-wave-2',
+        'theme-wave-3', 'theme-wave-4', 'theme-wave-5', 'theme-wave-6'
+      );
+      // force reflow so the class re-triggers transition-delay cleanly
+      void el.offsetWidth;
+      el.classList.add(`theme-wave-${Math.min(i, 6)}`);
+    });
+
     document.documentElement.classList.toggle('night-mode', isDark);
     if (isDark) {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -57,11 +74,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById(toggleId);
     if (btn) {
       btn.setAttribute('aria-pressed', String(isDark));
-        // keep icon-only button; SVG visibility handled via CSS based on aria-pressed
     }
+
+    // clean up delay classes after the wave finishes so hover states
+    // don't inherit a lingering transition-delay
+    window.setTimeout(() => {
+      waveTargets.forEach((el) => {
+        el.classList.remove(
+          'theme-wave-0', 'theme-wave-1', 'theme-wave-2',
+          'theme-wave-3', 'theme-wave-4', 'theme-wave-5', 'theme-wave-6'
+        );
+      });
+    }, 1200);
   }
 
-  // Apply on load (try saved preference, then OS preference, then default to light)
   document.addEventListener('DOMContentLoaded', () => {
     try {
       const saved = localStorage.getItem(THEME_KEY);
@@ -78,8 +104,65 @@ document.addEventListener('DOMContentLoaded', () => {
         try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* ignore */ }
       });
     } catch (e) {
-      // graceful failure: do nothing
       console.error('Theme init error', e);
     }
+  });
+})();
+
+// Project detail modal
+(function () {
+  const modal = document.getElementById('projectModal');
+  if (!modal) return;
+
+  const closeBtn = document.getElementById('modalClose');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalStatus = document.getElementById('modalStatus');
+  const modalTools = document.getElementById('modalTools');
+  const modalLiveLink = document.getElementById('modalLiveLink');
+
+  function openModal(card) {
+    modalImage.src = card.dataset.image || '';
+    modalImage.alt = card.dataset.title || '';
+    modalTitle.textContent = card.dataset.title || '';
+    modalDescription.textContent = card.dataset.description || '';
+    modalStatus.textContent = card.dataset.status || '';
+    modalTools.textContent = card.dataset.tools || '';
+
+    modalLiveLink.href = card.dataset.url || '#';
+    modalLiveLink.style.display = 'inline-flex';
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.project-row').forEach((card) => {
+    if (!card.dataset.title) return;
+    card.addEventListener('click', () => openModal(card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(card);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
 })();
