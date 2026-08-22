@@ -15,10 +15,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
   </head>
   <body>
     <div class="page-shell">
-      <header class="site-header">s
+      <header class="site-header">
         <div class="container nav-wrap">
           <a href="#top" class="brand" aria-label="nsz home">
             <span class="brand-mark">n</span>
@@ -31,6 +33,15 @@
             <a href="#contact">Contact</a>
           </nav>
           <a class="button button-small button-primary" href="#contact">Get started</a>
+          <button id="themeToggle" class="button button-small button-secondary theme-toggle" aria-pressed="false" aria-label="Toggle night mode">
+            <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+              <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
         </div>
       </header>
 
@@ -65,30 +76,30 @@
                 <div class="browser-body">
                   <div class="mockup-header">
                     <div>
-                      <p class="mini-label">Harbor Dental</p>
-                      <h2>New patient visits up 38%</h2>
+                      <p class="mini-label">NaturasiMIS</p>
+                      <h2>From handwritten logs to real-time tracking</h2>
                     </div>
-                    <span class="status-pill">Live</span>
+                    <span class="status-pill">Capstone Project</span>
                   </div>
                   <div class="mockup-hero-card">
                     <div class="thumb thumb-large"></div>
                     <div class="mini-copy">
-                      <strong>Modern care, easier booking</strong>
-                      <span>Clean messaging, fast load speed, clear calls to action.</span>
+                      <strong>Inventory &amp; production system</strong>
+                      <span>Built for a real cheese manufacturer — batch tracking, predictive restocking, live dashboards.</span>
                     </div>
                   </div>
                   <div class="metrics-row">
                     <div>
-                      <strong>4.9/5</strong>
-                      <span>Review score</span>
+                      <strong>6+</strong>
+                      <span>Core modules</span>
                     </div>
                     <div>
-                      <strong>48h</strong>
-                      <span>Avg. inquiry response</span>
+                      <strong>Live</strong>
+                      <span>Dashboard reporting</span>
                     </div>
                     <div>
-                      <strong>1.8s</strong>
-                      <span>Page load</span>
+                      <strong>RBAC</strong>
+                      <span>Role-based access</span>
                     </div>
                   </div>
                 </div>
@@ -106,12 +117,12 @@
 
             <div class="project-grid">
               <article class="project-card reveal">
-                <div class="project-screenshot card-photo photo-dental">
-                  <div class="project-label">Dental</div>
+                <div class="project-screenshot card-photo photo-naturasi">
+                  <div class="project-label">Manufacturing</div>
                 </div>
                 <div class="project-info">
-                  <h3>Harbor Dental</h3>
-                  <p>Rebuilt a family clinic website around trust, clarity, and easy appointment booking.</p>
+                  <h3>NaturasiMIS</h3>
+                  <p>Replaced handwritten logs and spreadsheets with a real-time inventory, batch tracking, and predictive restocking system for a local cheese manufacturer.</p>
                 </div>
               </article>
 
@@ -154,8 +165,8 @@
               <article class="benefit-card reveal">
                 <div class="icon-wrap" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path d="M7 16.5V9.5M12 16.5V5.5M17 16.5v-7" />
-                    <path d="M4 18.5h16" />
+                    <rect x="7" y="3" width="10" height="18" rx="2" />
+                    <path d="M11 18h2" />
                   </svg>
                 </div>
                 <h3>Mobile-friendly by default</h3>
@@ -165,9 +176,8 @@
               <article class="benefit-card reveal">
                 <div class="icon-wrap" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path d="M12 3v11l5 4" />
-                    <path d="M5 6.5h14" />
-                    <path d="M5 17.5h14" />
+                    <circle cx="12" cy="12" r="8.5" />
+                    <path d="M12 7.5v5l3.2 2" />
                   </svg>
                 </div>
                 <h3>Fast turnaround</h3>
@@ -177,8 +187,8 @@
               <article class="benefit-card reveal">
                 <div class="icon-wrap" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path d="M4 12.5 8.5 17 20 5.5" />
-                    <path d="M6 18.5h12" />
+                    <path d="M12.5 3.5h6a1 1 0 0 1 1 1v6a1 1 0 0 1-.3.7l-8.5 8.5a1 1 0 0 1-1.4 0l-6.7-6.7a1 1 0 0 1 0-1.4l8.5-8.5a1 1 0 0 1 .7-.3z" />
+                    <circle cx="16.5" cy="7.5" r="1.2" fill="currentColor" stroke="none" />
                   </svg>
                 </div>
                 <h3>Affordable for small business</h3>
