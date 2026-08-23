@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Allow: /naturasi.html
+Allow: /naturasi-website.html
+
+Disallow: /404.html

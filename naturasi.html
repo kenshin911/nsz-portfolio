@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NaturasiMIS case study — a private inventory, batch, and order system built for a cheese manufacturer in Silang, Cavite."
+    />
+    <meta name="author" content="nsz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f4f4f4" />
+    <meta name="color-scheme" content="light dark" />
+    <title>NaturasiMIS — Case study · nsz</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="NaturasiMIS — Case study · nsz" />
+    <meta
+      property="og:description"
+      content="Private manufacturing system: inventory, production batches, orders, reports, and role-based access. Screenshots, not a public login."
+    />
+    <meta property="og:image" content="assets/Dashboard.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#case">Skip to content</a>
+    <div class="page-grain" aria-hidden="true"></div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a href="index.html" class="brand" aria-label="nsz home">
+            <span class="brand-mark">n</span>
+            <span class="brand-text">nsz</span>
+          </a>
+
+          <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+            <a href="index.html#work">Work</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#contact">Contact</a>
+            <a class="button button-small button-primary nav-cta-mobile" href="index.html#contact">Get started</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="button button-small button-primary" href="index.html#contact">Get started</a>
+            <button
+              id="themeToggle"
+              class="button button-small button-secondary theme-toggle"
+              aria-pressed="false"
+              aria-label="Toggle night mode"
+              type="button"
+            >
+              <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              </svg>
+            </button>
+            <button
+              class="menu-toggle"
+              id="menuToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="siteNav"
+              aria-label="Open menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main id="case" class="case-page">
+        <section class="container case-intro">
+          <p class="eyebrow reveal in-view">Case study · Manufacturing</p>
+          <p class="project-row-label reveal in-view">Naturasi Cheese Co. · Silang, Cavite</p>
+          <h1 class="reveal in-view">NaturasiMIS</h1>
+          <p class="lead reveal in-view">
+            A private web system that replaced handwritten logs and spreadsheets with live inventory,
+            batch tracking, production orders, and predictive restocking — built for a real cheese plant,
+            not a demo account.
+          </p>
+          <p class="case-private reveal in-view">
+            No public login. The plant system stays private. This page is the walkthrough: screenshots
+            from the actual product, plus what it solved.
+          </p>
+          <ul class="case-meta reveal in-view">
+            <li><strong>Role</strong><span>Design &amp; engineering</span></li>
+            <li><strong>Stack</strong><span>Laravel, PHP, MySQL</span></li>
+            <li><strong>Type</strong><span>Internal MIS · desktop-first</span></li>
+          </ul>
+        </section>
+
+        <section class="container case-hero-shot reveal">
+          <figure>
+            <button type="button" class="shot-open" data-shot="assets/Dashboard.png" data-caption="Operations dashboard — batches, stock alerts, activity" aria-label="Enlarge operations dashboard screenshot">
+              <img src="assets/Dashboard.png" alt="NaturasiMIS dashboard with production and inventory metrics" />
+            </button>
+            <figcaption>Operations dashboard: active batches, low-stock alerts, and recent activity in one place.</figcaption>
+          </figure>
+        </section>
+
+        <section class="container case-prose">
+          <div class="reveal">
+            <h2>The problem</h2>
+            <p>
+              Naturasi is a cheese manufacturer in Silang, Cavite. Daily work — ingredients, batches,
+              expiry, and production notes — lived in paper logs and Excel. That breaks down as soon as
+              you have more than one cheese line: numbers drift, expiry gets missed, and nobody can see
+              what is actually in production without walking the floor.
+            </p>
+          </div>
+          <div class="reveal">
+            <h2>What I built</h2>
+            <p>
+              NaturasiMIS is a browser-based management system for the plant. Staff record stock and
+              batches once; managers see the same numbers. Confirming an order can deduct ingredients
+              from inventory automatically, so production and storage stay in sync instead of being two
+              separate notebooks.
+            </p>
+          </div>
+        </section>
+
+        <section class="container">
+          <h2 class="case-section-title reveal">Inside the system</h2>
+          <div class="case-feature-grid">
+            <article class="reveal">
+              <h3>Inventory</h3>
+              <p>Inbound, outbound, ending stock, low-stock and out-of-stock flags, plus a predictive restock view so materials don’t silently run out.</p>
+            </article>
+            <article class="reveal">
+              <h3>Production batches</h3>
+              <p>Batch numbers, product type, quantity, dates, status, and assigned staff — so a wheel of cheese can be traced after it leaves the vat.</p>
+            </article>
+            <article class="reveal">
+              <h3>Orders</h3>
+              <p>Client POs with confirm / complete / cancel states. Confirming an order deducts ingredients from inventory instead of hoping someone updated the sheet.</p>
+            </article>
+            <article class="reveal">
+              <h3>Reports</h3>
+              <p>Inventory and production summaries, best-selling vs slow-moving products, and stock charts management can actually use in a meeting.</p>
+            </article>
+            <article class="reveal">
+              <h3>Roles &amp; logs</h3>
+              <p>Admin, manager, inventory, and production accounts. Activity logs with CSV/PDF export so changes are accountable, not anonymous.</p>
+            </article>
+            <article class="reveal">
+              <h3>Plant settings</h3>
+              <p>Company branding, backups, and restore — the unglamorous pieces a real factory system still needs.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="container case-outcomes">
+          <h2 class="case-section-title reveal">What changed on the floor</h2>
+          <div class="case-outcome-grid">
+            <article class="reveal">
+              <h3>One set of numbers</h3>
+              <p>Stock, batches, and orders live in the same system. Floor staff enter once; managers see the same inventory without waiting on a spreadsheet.</p>
+            </article>
+            <article class="reveal">
+              <h3>Orders that move stock</h3>
+              <p>Confirming a client PO deducts ingredients automatically — Burrata and Stracciatella orders are no longer a separate notebook from the vat.</p>
+            </article>
+            <article class="reveal">
+              <h3>Who did what</h3>
+              <p>Admin, manager, inventory, and production roles, plus activity logs. Changes are attributable, not “someone edited the sheet.”</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="container case-gallery-wrap">
+          <h2 class="case-section-title reveal">Screens from the product</h2>
+          <p class="case-gallery-lede reveal">Click any shot to enlarge. These are the real screens, not mockups.</p>
+          <div class="case-gallery">
+            <figure class="reveal">
+              <button type="button" class="shot-open" data-shot="assets/naturasi/inventory.png" data-caption="Inventory — current stock, inbound/outbound, status" aria-label="Enlarge inventory screenshot">
+                <img src="assets/naturasi/inventory.png" alt="Inventory management table with stock status" />
+              </button>
+              <figcaption>Inventory</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" class="shot-open" data-shot="assets/naturasi/orders.png" data-caption="Production orders with status and ingredient-linked POs" aria-label="Enlarge orders screenshot">
+                <img src="assets/naturasi/orders.png" alt="Production orders list with confirmed and completed statuses" />
+              </button>
+              <figcaption>Orders</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" class="shot-open" data-shot="assets/naturasi/reports.png" data-caption="Reports — best selling, slow moving, stock levels" aria-label="Enlarge reports screenshot">
+                <img src="assets/naturasi/reports.png" alt="Reports page with best selling product and stock chart" />
+              </button>
+              <figcaption>Reports</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" class="shot-open" data-shot="assets/naturasi/users.png" data-caption="Role-based user accounts" aria-label="Enlarge users screenshot">
+                <img src="assets/naturasi/users.png" alt="Manage users page with admin, inventory, manager, and production roles" />
+              </button>
+              <figcaption>Users &amp; roles</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" class="shot-open" data-shot="assets/naturasi/activity.png" data-caption="Activity logs across auth, production, orders, and inventory" aria-label="Enlarge activity logs screenshot">
+                <img src="assets/naturasi/activity.png" alt="Activity logs table with module and action tags" />
+              </button>
+              <figcaption>Activity logs</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" class="shot-open" data-shot="assets/naturasi/settings.png" data-caption="System settings and backups" aria-label="Enlarge settings screenshot">
+                <img src="assets/naturasi/settings.png" alt="System settings with company info and backup controls" />
+              </button>
+              <figcaption>Settings</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="container case-close">
+          <div class="case-close-panel reveal">
+            <div>
+              <h2>Why there isn’t a live link</h2>
+              <p>
+                This is factory software with real stock and staff accounts. Hosting it on a public URL
+                would be the wrong kind of demo. If you want to see how a screen works, ask — I can walk
+                through these modules on a call.
+              </p>
+            </div>
+            <div class="case-cta-row">
+              <a class="button button-primary" href="index.html#contact">Ask about a system like this</a>
+              <a class="button button-secondary" href="index.html#work">Back to work</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <p class="footer-brand">nsz</p>
+              <p>Websites and internal tools for local businesses. Designed and built in the Philippines.</p>
+            </div>
+            <nav class="footer-col" aria-label="Explore">
+              <p class="footer-label">Explore</p>
+              <a href="index.html#work">Work</a>
+              <a href="naturasi.html">NaturasiMIS</a>
+              <a href="naturasi-website.html">Naturasì Brand Site</a>
+              <a href="index.html#pricing">Pricing</a>
+              <a href="index.html#contact">Contact</a>
+            </nav>
+            <nav class="footer-col" aria-label="Legal">
+              <p class="footer-label">Legal</p>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Service</a>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© <span id="year">2026</span> nsz. All rights reserved.</p>
+            <p>NaturasiMIS screenshots shown with permission for portfolio use. No public access to the live plant system.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal-overlay" id="shotLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="shotLightboxCap">
+      <div class="shot-lightbox">
+        <button class="modal-close" id="shotLightboxClose" type="button" aria-label="Close screenshot">&times;</button>
+        <img id="shotLightboxImg" alt="" />
+        <p id="shotLightboxCap"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -5,20 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="I build fast, modern websites for small businesses. Professional websites that help local businesses win more customers."
+      content="nsz builds fast, modern websites for local businesses — clean design, clear structure, and pages that help you win more customers."
     />
-    <title>nsz | Modern Websites for Local Businesses</title>
+    <meta name="author" content="nsz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f4f4f4" />
+    <meta name="color-scheme" content="light dark" />
+    <title>nsz — Websites for local businesses</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="nsz — Websites for local businesses" />
+    <meta
+      property="og:description"
+      content="Freelance web design for shops, trades, and service teams. Fast, mobile-first sites that make it easy to get booked."
+    />
+    <meta property="og:image" content="assets/Dashboard.png" />
+    <meta property="og:locale" content="en_PH" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="nsz — Websites for local businesses" />
+    <meta
+      name="twitter:description"
+      content="Freelance web design for shops, trades, and service teams."
+    />
+    <meta name="twitter:image" content="assets/Dashboard.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicon.ico" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "nsz",
+        "description": "Freelance web design for local businesses in the Philippines.",
+        "email": "naszjeighallensaguid@gmail.com",
+        "areaServed": "PH",
+        "priceRange": "$299+",
+        "url": "./"
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+    <div class="page-grain" aria-hidden="true"></div>
+
     <div class="page-shell">
       <header class="site-header">
         <div class="container nav-wrap">
@@ -26,139 +60,195 @@
             <span class="brand-mark">n</span>
             <span class="brand-text">nsz</span>
           </a>
-          <nav class="site-nav" aria-label="Main navigation">
+
+          <nav class="site-nav" id="siteNav" aria-label="Main navigation">
             <a href="#work">Work</a>
-            <a href="#benefits">Benefits</a>
+            <a href="#process">Process</a>
             <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
+            <a class="button button-small button-primary nav-cta-mobile" href="#contact">Get started</a>
           </nav>
-          <a class="button button-small button-primary" href="#contact">Get started</a>
-          <button id="themeToggle" class="button button-small button-secondary theme-toggle" aria-pressed="false" aria-label="Toggle night mode">
-            <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-            <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
-              <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </button>
+
+          <div class="nav-actions">
+            <a class="button button-small button-primary" href="#contact">Get started</a>
+            <button
+              id="themeToggle"
+              class="button button-small button-secondary theme-toggle"
+              aria-pressed="false"
+              aria-label="Toggle night mode"
+              type="button"
+            >
+              <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              </svg>
+            </button>
+            <button
+              class="menu-toggle"
+              id="menuToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="siteNav"
+              aria-label="Open menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </header>
 
       <main id="top">
-        <section class="hero section-space">
+        <section class="hero">
           <div class="container hero-grid">
-            <div class="hero-copy reveal">
-              <p class="eyebrow">Freelance web design for local businesses</p>
-              <h1>I build fast, modern websites for small businesses.</h1>
+            <div class="hero-copy reveal in-view">
+              <p class="eyebrow">Freelance web design · Philippines</p>
+              <p class="availability"><span></span> Now booking new projects</p>
+              <h1>A website that looks like you actually run the business.</h1>
               <p class="lead">
-                Helping local businesses look more professional online, attract better-fit
-                customers, and turn more visits into booked jobs.
+                I design and build fast, mobile-first sites for local shops, trades, and service teams
+                so you look professional online and make it easy to get booked.
               </p>
               <div class="cta-row">
-                <a class="button button-primary" href="#work">See My Work</a>
-                <a class="button button-secondary" href="#contact">Get in Touch</a>
+                <a class="button button-primary" href="#work">See the work</a>
+                <a class="button button-secondary" href="#contact">Tell me about your business</a>
               </div>
-              <ul class="hero-metrics" aria-label="business impact statistics">
-                <li><strong>2–4 weeks</strong><span>typical launch</span></li>
-                <li><strong>Mobile-first</strong><span>by default</span></li>
-                <li><strong>Small biz pricing</strong><span>no agency fluff</span></li>
+              <ul class="hero-metrics" aria-label="How projects typically run">
+                <li><strong>2–4 weeks</strong><span>Typical launch</span></li>
+                <li><strong>Mobile-first</strong><span>Where customers actually browse</span></li>
+                <li><strong>Clear pricing</strong><span>Starting at $299</span></li>
               </ul>
             </div>
 
-            <div class="hero-visual reveal" aria-label="Website mockup preview">
-              <div class="browser-shell">
-                <div class="browser-topbar">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+            <div class="hero-visual reveal in-view">
+              <div class="hero-glow" aria-hidden="true"></div>
+              <figure class="device-frame">
+                <div class="device-chrome">
+                  <span></span><span></span><span></span>
+                  <p>naturasi-mis · operations</p>
                 </div>
-                <div class="browser-body">
-                  <div class="mockup-header">
-                    <div>
-                      <p class="mini-label">NaturasiMIS</p>
-                      <h2>From handwritten logs to real-time tracking</h2>
-                    </div>
-                    <span class="status-pill">Capstone Project</span>
-                  </div>
-                  <div class="mockup-hero-card">
-                    <div class="thumb thumb-large"></div>
-                    <div class="mini-copy">
-                      <strong>Inventory &amp; production system</strong>
-                      <span>Built for a real cheese manufacturer — batch tracking, predictive restocking, live dashboards.</span>
-                    </div>
-                  </div>
-                  <div class="metrics-row">
-                    <div>
-                      <strong>6+</strong>
-                      <span>Core modules</span>
-                    </div>
-                    <div>
-                      <strong>Live</strong>
-                      <span>Dashboard reporting</span>
-                    </div>
-                    <div>
-                      <strong>RBAC</strong>
-                      <span>Role-based access</span>
-                    </div>
-                  </div>
+                <img
+                  src="assets/Dashboard.png"
+                  alt="NaturasiMIS inventory dashboard showing stock levels and reporting"
+                />
+              </figure>
+              <div class="hero-float-card">
+                <span class="status-dot"></span>
+                <div>
+                  <strong>NaturasiMIS</strong>
+                  <p>Handwritten logs → real-time tracking</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="work" class="section-space projects">
+        <section class="strip">
+          <div class="container strip-inner">
+            <p>Built for cafés, contractors, clinics, and shops that need to look sharp without an agency retainer.</p>
+          </div>
+        </section>
+
+        <section id="work" class="section-space work">
           <div class="container">
             <div class="section-heading reveal">
               <p class="eyebrow">Selected work</p>
-              <h2>Websites designed to feel premium and convert.</h2>
+              <h2>Real systems &amp; websites. Built for a real manufacturer.</h2>
+              <p class="section-lede">
+                I’m early in freelance so you’ll see real work here, not invented client names.
+                Both the internal operations system (NaturasiMIS) and the brand website were designed and coded for Naturasì Cheese Co. in Silang, Cavite.
+              </p>
             </div>
 
-            <div class="project-list">
-              <article class="project-row reveal" tabindex="0" role="button"
-                data-title="NaturasiMIS"
-                data-category="Manufacturing"
-                data-status="Capstone Project"
-                data-tools="Laravel, MySQL, Blade"
-                data-description="Naturasi, a cheese manufacturer in Silang, Cavite, was running their entire operation on handwritten logs and spreadsheets. I designed and built a web-based system that centralizes inventory, tracks production batches in real time, and predicts when materials need restocking — replacing scattered paperwork with a live dashboard."
-                data-image="assets/Dashboard.png"
-                data-url="">
-                <div class="project-row-media card-photo photo-naturasi"></div>
-                <div class="project-row-info">
-                  <p class="project-row-label">[ Manufacturing ]</p>
+            <article class="case-study reveal">
+              <a class="case-study-link" href="naturasi.html">
+                <div class="case-media">
+                  <img src="assets/Dashboard.png" alt="NaturasiMIS dashboard screenshot" />
+                </div>
+                <div class="case-body">
+                  <p class="project-row-label">Manufacturing MIS · Silang, Cavite</p>
                   <h3>NaturasiMIS</h3>
-                  <p>Replaced handwritten logs and spreadsheets with a real-time inventory, batch tracking, and predictive restocking system for a local cheese manufacturer.</p>
+                  <p>
+                    Replaced handwritten logs and spreadsheets with inventory, batch tracking, and
+                    predictive restocking one operations dashboard instead of piles of paper.
+                  </p>
+                  <ul class="case-tags">
+                    <li>Private system · no public login</li>
+                    <li>Screenshots in the case study</li>
+                    <li>Laravel · PHP · MySQL</li>
+                  </ul>
+                  <span class="text-link">Read the case study <span aria-hidden="true">→</span></span>
                 </div>
-                <span class="project-row-stamp">Shipped</span>
-                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
-              </article>
+              </a>
+            </article>
 
-              <article class="project-row reveal">
-                <div class="project-row-media card-photo photo-landscape"></div>
-                <div class="project-row-info">
-                  <p class="project-row-label">[ Landscaping ]</p>
-                  <h3>Maple &amp; Pine</h3>
-                  <p>Introduced a cleaner service structure and stronger lead capture for a local lawn care team.</p>
+            <article class="case-study reveal">
+              <a class="case-study-link" href="naturasi-website.html">
+                <div class="case-media">
+                  <img src="assets/naturasi-brand.jpg" alt="Naturasì brand and wholesale website screenshot" />
                 </div>
-                <span class="project-row-stamp">Shipped</span>
-                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
-              </article>
+                <div class="case-body">
+                  <p class="project-row-label">Brand &amp; Wholesale · Silang, Cavite</p>
+                  <h3>Naturasì Brand &amp; Wholesale Website</h3>
+                  <p>
+                    A complete marketing and wholesale site for the cheese company: artisan product catalog,
+                    farm to table process, distributor finder, press highlights, and wholesale lead capture.
+                  </p>
+                  <ul class="case-tags">
+                    <li>Pitch &amp; concept build</li>
+                    <li>Artisan catalog &amp; B2B inquiries</li>
+                    <li>HTML · CSS · JavaScript</li>
+                  </ul>
+                  <span class="text-link">Read the case study <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </article>
 
-              <article class="project-row reveal">
-                <div class="project-row-media before-after">
-                  <div class="before"><span>Before</span></div>
-                  <div class="after"><span>After</span></div>
-                </div>
-                <div class="project-row-info">
-                  <p class="project-row-label">[ Hospitality ]</p>
-                  <h3>North Street Salon</h3>
-                  <p>Updated a dated booking page into an elevated brand experience built for mobile browsing.</p>
-                </div>
-                <span class="project-row-stamp">Shipped</span>
-                <span class="project-row-arrow" aria-hidden="true">&rarr;</span>
+            <div class="offer-grid">
+              <article class="offer-card reveal">
+                <h3>Service business sites</h3>
+                <p>Clear services, proof, and a contact path that makes booking the obvious next step.</p>
+              </article>
+              <article class="offer-card reveal">
+                <h3>Local shop &amp; café pages</h3>
+                <p>Hours, menu or offerings, map, and a look that matches the room not a template farm.</p>
+              </article>
+              <article class="offer-card reveal">
+                <h3>Internal tools</h3>
+                <p>When spreadsheets stop scaling, I can build the system your team actually uses every day.</p>
               </article>
             </div>
+          </div>
+        </section>
+
+        <section id="process" class="section-space process">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">How it works</p>
+              <h2>A short, honest process. No mystery weeks.</h2>
+            </div>
+            <ol class="process-list">
+              <li class="reveal">
+                <h3>Talk it through</h3>
+                <p>You tell me what the business does, who should call, and what’s broken about the current site or lack of one.</p>
+              </li>
+              <li class="reveal">
+                <h3>Design the pages</h3>
+                <p>I map the structure, write a tight visual direction, and show you layouts before anything is locked in.</p>
+              </li>
+              <li class="reveal">
+                <h3>Build &amp; polish</h3>
+                <p>I code it myself: fast, mobile-first, and easy to update. You get a site you can actually send people to.</p>
+              </li>
+              <li class="reveal">
+                <h3>Launch</h3>
+                <p>We go live, I walk you through how to use it, and we tweak the last 10% that only shows up in the real world.</p>
+              </li>
+            </ol>
           </div>
         </section>
 
@@ -166,41 +256,29 @@
           <div class="container">
             <div class="section-heading reveal narrow">
               <p class="eyebrow">Why work with me</p>
-              <h2>Simple, effective websites built for real business results.</h2>
+              <h2>Simple sites. Built to get you customers, not awards.</h2>
             </div>
-
             <div class="benefit-grid">
               <article class="benefit-card reveal">
                 <div class="icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <rect x="7" y="3" width="10" height="18" rx="2" />
-                    <path d="M11 18h2" />
-                  </svg>
+                  <svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2" /><path d="M11 18h2" /></svg>
                 </div>
-                <h3>Mobile-friendly by default</h3>
-                <p>Your website will look clean and easy to use on the phone, where most local customers are browsing.</p>
+                <h3>Mobile-first, always</h3>
+                <p>Most local customers are on their phone. Your site will be easy to read, tap, and contact from a small screen.</p>
               </article>
-
               <article class="benefit-card reveal">
                 <div class="icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <circle cx="12" cy="12" r="8.5" />
-                    <path d="M12 7.5v5l3.2 2" />
-                  </svg>
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5v5l3.2 2" /></svg>
                 </div>
                 <h3>Fast turnaround</h3>
-                <p>Clear process, straightforward communication, and a launch timeline that respects your schedule.</p>
+                <p>Clear process, straightforward messages, and a launch window that respects how busy you already are.</p>
               </article>
-
               <article class="benefit-card reveal">
                 <div class="icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path d="M12.5 3.5h6a1 1 0 0 1 1 1v6a1 1 0 0 1-.3.7l-8.5 8.5a1 1 0 0 1-1.4 0l-6.7-6.7a1 1 0 0 1 0-1.4l8.5-8.5a1 1 0 0 1 .7-.3z" />
-                    <circle cx="16.5" cy="7.5" r="1.2" fill="currentColor" stroke="none" />
-                  </svg>
+                  <svg viewBox="0 0 24 24"><path d="M12.5 3.5h6a1 1 0 0 1 1 1v6a1 1 0 0 1-.3.7l-8.5 8.5a1 1 0 0 1-1.4 0l-6.7-6.7a1 1 0 0 1 0-1.4l8.5-8.5a1 1 0 0 1 .7-.3z" /><circle cx="16.5" cy="7.5" r="1.2" fill="currentColor" stroke="none" /></svg>
                 </div>
-                <h3>Affordable for small business</h3>
-                <p>Professional design without the heavy agency price tag — built for businesses that need to grow, not just look busy.</p>
+                <h3>Priced for small business</h3>
+                <p>Professional design without an agency markup. You pay for a site that works not for a 40-slide pitch deck.</p>
               </article>
             </div>
           </div>
@@ -208,12 +286,75 @@
 
         <section id="pricing" class="section-space pricing">
           <div class="container">
-            <div class="pricing-card reveal">
-              <p class="eyebrow light">Simple pricing</p>
-              <h2>Websites starting at $299 — custom quotes available.</h2>
-              <p>
-                For service businesses that need a polished presence without a complicated project process.
-              </p>
+            <div class="section-heading reveal">
+              <p class="eyebrow">Simple pricing</p>
+              <h2>Start small. Grow when you’re ready.</h2>
+            </div>
+            <div class="price-grid">
+              <article class="price-card reveal">
+                <p class="price-name">Starter</p>
+                <p class="price-amount">$299</p>
+                <p class="price-note">One strong page</p>
+                <ul>
+                  <li>Home / landing page</li>
+                  <li>Mobile-first layout</li>
+                  <li>Contact or booking CTA</li>
+                  <li>Launch in about 2 weeks</li>
+                </ul>
+                <a class="button button-secondary button-full" href="#contact">Start with this</a>
+              </article>
+              <article class="price-card price-card-featured reveal">
+                <p class="price-badge">Most booked</p>
+                <p class="price-name">Business</p>
+                <p class="price-amount">$599</p>
+                <p class="price-note">A full small-business site</p>
+                <ul>
+                  <li>Up to 5 pages</li>
+                  <li>Services, about, contact</li>
+                  <li>Photo-ready layout</li>
+                  <li>Launch in 3–4 weeks</li>
+                </ul>
+                <a class="button button-primary button-full" href="#contact">Get this one</a>
+              </article>
+              <article class="price-card reveal">
+                <p class="price-name">Custom</p>
+                <p class="price-amount">Quote</p>
+                <p class="price-note">Systems &amp; larger sites</p>
+                <ul>
+                  <li>Dashboards &amp; tools</li>
+                  <li>Extra pages or features</li>
+                  <li>Copy help if you need it</li>
+                  <li>Timeline based on scope</li>
+                </ul>
+                <a class="button button-secondary button-full" href="#contact">Ask for a quote</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" class="section-space faq">
+          <div class="container faq-wrap">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Questions</p>
+              <h2>Before you email.</h2>
+            </div>
+            <div class="faq-list">
+              <details class="reveal" open>
+                <summary>How long does a site take?</summary>
+                <p>Most brochure sites land in 2–4 weeks, depending on how quickly we get photos, copy, and feedback. Systems like NaturasiMIS take longer because they are real software, not just pages.</p>
+              </details>
+              <details class="reveal">
+                <summary>Do I need to write the copy?</summary>
+                <p>If you have it, great. If you don’t, I can draft clear page copy from a short call so you’re not staring at a blank page.</p>
+              </details>
+              <details class="reveal">
+                <summary>What do you need from me?</summary>
+                <p>A few photos, your hours and services, and what you want people to do (call, book, visit, order). That’s enough to start.</p>
+              </details>
+              <details class="reveal">
+                <summary>Can you host and update it later?</summary>
+                <p>Yes. We can talk hosting when we pick a plan. Small updates after launch are straightforward you’re not locked into a mystery CMS.</p>
+              </details>
             </div>
           </div>
         </section>
@@ -222,74 +363,68 @@
           <div class="container contact-wrap">
             <div class="contact-copy reveal">
               <p class="eyebrow">Let’s talk</p>
-              <h2>Ready for a website that actually works for your business?</h2>
-              <p>Tell me a little about your business, what you need, and how you want to attract more customers.</p>
+              <h2>Ready for a site that actually works for the business?</h2>
+              <p>Tell me what you do, who you want to reach, and what’s missing online. I’ll reply with next steps not a sales script.</p>
               <div class="contact-details">
                 <a href="mailto:naszjeighallensaguid@gmail.com">naszjeighallensaguid@gmail.com</a>
-                <a href="tel:+15551234567">(555) 123-4567</a>
               </div>
             </div>
 
             <form id="contactForm" class="contact-form reveal">
               <label>
                 <span>Name</span>
-                <input type="text" name="name" placeholder="Your name" required />
+                <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
               </label>
               <label>
                 <span>Email</span>
-                <input type="email" name="email" placeholder="you@example.com" required />
+                <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
               </label>
               <label>
-                <span>Message</span>
-                <textarea name="message" rows="5" placeholder="Tell me about your business and your goals." required></textarea>
+                <span>Business type</span>
+                <input type="text" name="business" placeholder="Café, clinic, contractor…" />
+              </label>
+              <label>
+                <span>What do you need?</span>
+                <textarea name="message" rows="5" placeholder="A new site, a rebuild, or an internal tool…" required></textarea>
+              </label>
+              <label class="consent">
+                <input type="checkbox" name="consent" required />
+                <span>I agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</span>
               </label>
               <button type="submit" class="button button-primary button-full">Start my project</button>
+              <p class="form-note">Opens your email app with the details filled in. I never sell your information.</p>
             </form>
           </div>
         </section>
       </main>
 
-      <div id="projectModal" class="modal-overlay" aria-hidden="true">
-        <div class="modal-card modal-card-split" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-          <button type="button" class="modal-close" id="modalClose" aria-label="Close project details">&times;</button>
-
-          <div class="modal-split-screenshot">
-            <img id="modalImage" src="" alt="" />
-          </div>
-
-          <div class="modal-split-info">
-            <div class="modal-split-brand">
-              <img src="assets/Naturasi-MIS-Logo.png" alt="" class="modal-split-logo" />
-              <div>
-                <h3 id="modalTitle"></h3>
-                <p class="modal-split-subtitle" id="modalSubtitle">Manufacturing MIS</p>
-              </div>
-            </div>
-
-            <p class="modal-description" id="modalDescription"></p>
-
-            <div class="modal-meta modal-meta-split">
-              <div>
-                <span class="modal-meta-label">Type</span>
-                <span id="modalStatus"></span>
-              </div>
-              <div>
-                <span class="modal-meta-label">Stack</span>
-                <span id="modalTools"></span>
-              </div>
-            </div>
-
-            <div class="modal-actions">
-              <a id="modalLiveLink" class="button button-primary" href="#" target="_blank" rel="noopener">Live Preview ↗</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <footer class="site-footer">
-        <div class="container footer-wrap">
-          <p>nsz</p>
-          <p>Designed for local businesses that want to earn more trust online.</p>
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <p class="footer-brand">nsz</p>
+              <p>Websites for local businesses that want more trust online. Designed and built by nsz in the Philippines.</p>
+            </div>
+            <nav class="footer-col" aria-label="Explore">
+              <p class="footer-label">Explore</p>
+              <a href="#work">Work</a>
+              <a href="naturasi.html">NaturasiMIS</a>
+              <a href="naturasi-website.html">Naturasì Brand Site</a>
+              <a href="#process">Process</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            <nav class="footer-col" aria-label="Legal">
+              <p class="footer-label">Legal</p>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Service</a>
+              <a href="mailto:naszjeighallensaguid@gmail.com">Email</a>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© <span id="year">2026</span> nsz. All rights reserved.</p>
+            <p>All content, design, and code on this site are the property of nsz unless otherwise noted.</p>
+          </div>
         </div>
       </footer>
     </div>
