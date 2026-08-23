@@ -2,9 +2,11 @@ const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
 const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const submitBtn = document.getElementById('submitBtn');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const formData = new FormData(contactForm);
@@ -12,13 +14,65 @@ if (contactForm) {
     const email = (formData.get('email') || '').toString().trim();
     const business = (formData.get('business') || '').toString().trim();
     const message = (formData.get('message') || '').toString().trim();
+    const accessKey = (formData.get('access_key') || '').toString().trim();
 
+    if (formStatus) {
+      formStatus.className = 'form-status';
+      formStatus.style.display = 'none';
+      formStatus.textContent = '';
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
+
+    // If an access key is configured, send directly via API
+    if (accessKey && accessKey !== 'YOUR_ACCESS_KEY_HERE') {
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          if (formStatus) {
+            formStatus.className = 'form-status success';
+            formStatus.textContent = `Thank you, ${name || 'there'}! Your inquiry has been sent. I'll get back to you within 24 hours.`;
+          }
+          contactForm.reset();
+          return;
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+      } catch (err) {
+        console.warn('Direct submission error, falling back to mailto:', err);
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Start my project';
+        }
+      }
+    }
+
+    // Graceful fallback to mailto if no key configured or offline
     const subject = encodeURIComponent(`New project inquiry from ${name || 'a potential client'}`);
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nBusiness: ${business || 'n/a'}\n\nProject details:\n${message}`
     );
 
+    if (formStatus) {
+      formStatus.className = 'form-status success';
+      formStatus.textContent = 'Opening your email client to send your inquiry...';
+    }
+
     window.location.href = `mailto:naszjeighallensaguid@gmail.com?subject=${subject}&body=${body}`;
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Start my project';
+    }
   });
 }
 

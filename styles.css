@@ -911,6 +911,29 @@ h3 {
   text-align: center;
 }
 
+.form-status {
+  display: none;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.form-status.success {
+  display: block;
+  background: color-mix(in srgb, #2f9e62 14%, var(--panel));
+  border: 1px solid color-mix(in srgb, #2f9e62 40%, transparent);
+  color: #2f9e62;
+}
+
+.form-status.error {
+  display: block;
+  background: color-mix(in srgb, #e03131 14%, var(--panel));
+  border: 1px solid color-mix(in srgb, #e03131 40%, transparent);
+  color: #e03131;
+}
+
 .site-footer {
   padding: 0 0 2.4rem;
 }
@@ -1423,6 +1446,10 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.1rem;
+}
+
+.case-gallery figure:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .case-outcome-grid {

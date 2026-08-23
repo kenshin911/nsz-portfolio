@@ -189,7 +189,7 @@
             <article class="case-study reveal">
               <a class="case-study-link" href="naturasi-website.html">
                 <div class="case-media">
-                  <img src="assets/naturasi-brand.jpg" alt="Naturasì brand and wholesale website screenshot" />
+                  <img src="assets/naturasi-brand.png" alt="Naturasì brand and wholesale website screenshot" />
                 </div>
                 <div class="case-body">
                   <p class="project-row-label">Brand &amp; Wholesale · Silang, Cavite</p>
@@ -371,6 +371,8 @@
             </div>
 
             <form id="contactForm" class="contact-form reveal">
+              <input type="hidden" name="access_key" id="formAccessKey" value="ebcb9fa3-0863-4486-a19d-3262a46390e4" />
+              <div id="formStatus" class="form-status" role="alert"></div>
               <label>
                 <span>Name</span>
                 <input type="text" name="name" placeholder="Your name" required autocomplete="name" />
@@ -391,8 +393,8 @@
                 <input type="checkbox" name="consent" required />
                 <span>I agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</span>
               </label>
-              <button type="submit" class="button button-primary button-full">Start my project</button>
-              <p class="form-note">Opens your email app with the details filled in. I never sell your information.</p>
+              <button type="submit" id="submitBtn" class="button button-primary button-full">Start my project</button>
+              <p class="form-note">Direct delivery to my inbox. I never sell your information.</p>
             </form>
           </div>
         </section>
