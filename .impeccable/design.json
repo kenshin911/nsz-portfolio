@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-25T21:32:00.000Z",
+  "title": "Design System: nsz",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Deep Ink",
+        "canonical": "#111111",
+        "tonalRamp": ["#000000", "#111111", "#222222", "#444444", "#666666", "#999999", "#cccccc", "#f4f4f4"]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Canvas Paper",
+        "canonical": "#f4f4f4",
+        "tonalRamp": ["#161614", "#262624", "#4a4a46", "#73736e", "#a8a8a2", "#d6d6cf", "#edebe6", "#f4f4f4"]
+      },
+      "neutral-panel": {
+        "role": "neutral",
+        "displayName": "Studio Panel",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#141414", "#242424", "#484848", "#787878", "#adadad", "#dbdbdb", "#f0f0f0", "#ffffff"]
+      },
+      "success": {
+        "role": "accent",
+        "displayName": "Active Green",
+        "canonical": "#2f9e62",
+        "tonalRamp": ["#0b381e", "#13542f", "#1c7342", "#2f9e62", "#48bf7d", "#75d99f", "#aff2cc", "#e6fcf0"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Fraunces Display", "purpose": "Hero headline and primary page titles" },
+      "headline": { "displayName": "Fraunces Headline", "purpose": "Major section headings" },
+      "title": { "displayName": "Outfit Title", "purpose": "Card titles and feature headers" },
+      "body": { "displayName": "Outfit Body", "purpose": "Paragraph copy and editorial ledes" },
+      "label": { "displayName": "JetBrains Mono Label", "purpose": "Tech stack tags and metadata badges" }
+    },
+    "shadows": [
+      { "name": "ambient-elevation", "value": "0 24px 60px rgba(0, 0, 0, 0.08)", "purpose": "Diffuse ambient elevation for device frames and dialogs" }
+    ],
+    "motion": [
+      { "name": "ease-smooth", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Exponential deceleration for hover and transition effects" }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "860px" },
+      { "name": "lg", "value": "1152px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-contrast action button with micro-lift hover state.",
+      "html": "<button class=\"ds-btn-primary\">Start my project</button>",
+      "css": ".ds-btn-primary { background: #111111; color: #f4f4f4; padding: 0.85rem 1.4rem; font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; border: none; border-radius: 0.75rem; cursor: pointer; transition: transform 220ms ease, background 220ms ease; } .ds-btn-primary:hover { transform: translateY(-2px); background: #000000; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Tactile bordered button for secondary discovery actions.",
+      "html": "<button class=\"ds-btn-secondary\">See the work</button>",
+      "css": ".ds-btn-secondary { background: #ffffff; color: #111111; padding: 0.85rem 1.4rem; font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; border: 1px solid #111111; border-radius: 0.75rem; cursor: pointer; transition: transform 220ms ease, background 220ms ease; } .ds-btn-secondary:hover { transform: translateY(-2px); background: #111111; color: #f4f4f4; }"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "custom",
+      "refersTo": "theme-toggle",
+      "description": "44x44px circular theme switcher with accessible hit area.",
+      "html": "<button class=\"ds-theme-toggle\" aria-label=\"Toggle night mode\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\"/></svg></button>",
+      "css": ".ds-theme-toggle { width: 44px; height: 44px; border-radius: 999px; display: inline-grid; place-items: center; border: 1px solid rgba(17,17,17,0.12); background: #ffffff; color: #111111; cursor: pointer; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Master Workshop",
+    "overview": "A high-craft, editorial design system built for a modern web engineering practice. It balances the warm, tangible authority of an artisan workshop with the razor-sharp execution of production software. The atmosphere is quiet, confident, and grounded: tactile eggshell paper, deep ink typography, subtle physical grain, and zero decorative fluff.",
+    "keyCharacteristics": [
+      "Tactile warmth: Parchment canvas texture paired with high-contrast ink typography.",
+      "Asymmetric editorial rhythm: Alternating between full-width statements, two-column editorial splits, and structured pricing comparison grids.",
+      "Zero-bullshit clarity: Direct, plain-language hierarchy with zero placeholder buzzwords."
+    ],
+    "rules": [
+      { "name": "The Rarity Rule", "body": "High-saturation color appears exclusively on functional status signals. The interface speaks in typography and tonal contrast.", "section": "colors" },
+      { "name": "The No-Kicker Rule", "body": "Headings carry their own weight without redundant category tags or tiny uppercase eyebrows above them.", "section": "typography" },
+      { "name": "The Tonal Depth Rule", "body": "Depth comes from material contrast and precise borders, never from heavy drop shadows or colored glowing halos.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do maintain a strict 65–75ch character measure for all long-form body paragraphs.",
+      "Do preserve the tactile eggshell texture and warm parchment tones in light mode.",
+      "Do show real project screens with authentic operational details instead of generic placeholder art.",
+      "Do ensure every interactive element meets the 44×44px mobile touch target minimum."
+    ],
+    "donts": [
+      "Don't reintroduce uppercase kicker tags or eyebrow labels above section headings.",
+      "Don't use decorative gradient text or colored shadow halos.",
+      "Don't stack consecutive 3-card icon grids without varying the layout rhythm.",
+      "Don't use generic buzzwords ('streamline', 'seamless', 'synergy') in project descriptions."
+    ]
+  }
+}
