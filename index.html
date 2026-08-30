@@ -19,6 +19,8 @@
       content="Freelance web design for shops, trades, and service teams. Fast, mobile-first sites that make it easy to get booked."
     />
     <meta property="og:image" content="assets/naturasi-brand.png" />
+    <meta property="og:url" content="https://nsz-web.netlify.app/" />
+    <link rel="canonical" href="https://nsz-web.netlify.app/" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="nsz — Websites for local businesses" />
@@ -62,6 +64,7 @@
           </a>
 
           <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+            <a href="#about">About</a>
             <a href="#work">Work</a>
             <a href="#process">Process</a>
             <a href="#pricing">Pricing</a>
@@ -106,7 +109,7 @@
         <section class="hero">
           <div class="container hero-grid">
             <div class="hero-copy reveal in-view">
-              <p class="availability"><span></span> Available worldwide · Booking new projects</p>
+              <p class="availability"><span></span> Open to new projects &mdash; remote-friendly</p>
               <h1>A website that looks like you actually run the business.</h1>
               <p class="lead">
                 I design and build fast, mobile-first sites for local shops, trades, and service teams
@@ -118,7 +121,7 @@
               </div>
               <ul class="hero-metrics" aria-label="How projects typically run">
                 <li><strong>2–4 weeks</strong><span>Typical launch</span></li>
-                <li><strong>Mobile-first</strong><span>Where customers actually browse</span></li>
+                <li><strong>Mobile-first</strong><span>Where customers browse</span></li>
                 <li><strong>Clear pricing</strong><span>Starting at $299</span></li>
               </ul>
             </div>
@@ -145,13 +148,54 @@
           </div>
         </section>
 
+        <section id="about" class="section-space about">
+          <div class="container about-wrap">
+            <div class="about-photo-col">
+              <div class="about-photo-frame">
+                <img
+                  src="assets/Personal-Image.jpg"
+                  alt="Nasz Jeigh Allen Saguid — independent web developer based in the Philippines"
+                  class="about-photo"
+                />
+              </div>
+            </div>
+            <div class="about-copy reveal">
+              <p class="project-row-label">Who I am</p>
+              <h2>Hi, I'm Nasz.</h2>
+              <p class="lead">
+                I'm an independent web developer based in the Philippines. I design and build
+                websites and custom systems for businesses — directly, without agency layers
+                or account managers in between.
+              </p>
+              <p class="about-detail">
+                When you work with me, you communicate with the same person designing,
+                coding, and delivering the project. No handoffs, no mystery queues. Just
+                clear work, honest communication, and a site you can actually use.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/nasz-jeigh-allen-saguid-150aa339a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="about-linkedin"
+                aria-label="Nasz Jeigh Allen Saguid on LinkedIn (opens in new tab)"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn &mdash; Nasz Jeigh Allen Saguid
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section id="work" class="section-space work">
           <div class="container">
             <div class="section-heading reveal">
               <h2>Real systems &amp; websites. Built for a real manufacturer.</h2>
               <p class="section-lede">
-                I’m early in freelance so you’ll see real work here, not invented client names.
-                Both the internal operations system (NaturasiMIS) and the brand website were designed and coded for Naturasì Cheese Co. in Silang, Cavite.
+                This portfolio shows real projects and real development work — no placeholder names,
+                invented clients, or fake testimonials. Both NaturasiMIS and the Naturasì brand
+                website were designed and built for Naturasì Cheese Co. in Silang, Cavite.
               </p>
             </div>
 
@@ -164,11 +208,12 @@
                   <p class="project-row-label">Manufacturing MIS · Silang, Cavite</p>
                   <h3>NaturasiMIS</h3>
                   <p>
-                    Replaced handwritten logs and spreadsheets with inventory, batch tracking, and
-                    predictive restocking one operations dashboard instead of piles of paper.
+                    A capstone project built around Naturasì's real production workflow — an inventory,
+                    batch-tracking, and order management system designed to replace handwritten logs and
+                    paper-based operations.
                   </p>
                   <ul class="case-tags">
-                    <li>Private system · no public login</li>
+                    <li>Capstone project · not deployed</li>
                     <li>Screenshots in the case study</li>
                     <li>Laravel · PHP · MySQL</li>
                   </ul>
@@ -190,7 +235,7 @@
                     farm to table process, distributor finder, press highlights, and wholesale lead capture.
                   </p>
                   <ul class="case-tags">
-                    <li>Pitch &amp; concept build</li>
+                    <li>Independent concept &middot; not deployed</li>
                     <li>Artisan catalog &amp; B2B inquiries</li>
                     <li>HTML · CSS · JavaScript</li>
                   </ul>
@@ -206,15 +251,33 @@
             <div class="offer-grid">
               <article class="offer-card reveal">
                 <h3>Service business sites</h3>
-                <p>Clear services, proof, and a contact path that makes booking the obvious next step.</p>
+                <p>For trades, clinics, consultants, and any business that needs to be found and booked.</p>
+                <ul>
+                  <li>Homepage with services, proof, and contact</li>
+                  <li>Mobile-first layout built for fast loading</li>
+                  <li>Contact form or booking call-to-action</li>
+                  <li>Basic on-page SEO setup</li>
+                </ul>
               </article>
               <article class="offer-card reveal">
                 <h3>Local shop &amp; café pages</h3>
-                <p>Hours, menu or offerings, map, and a look that matches the room, not a template farm.</p>
+                <p>For shops, restaurants, and any walk-in business that needs a clear online presence.</p>
+                <ul>
+                  <li>Hours, location, and menu or offerings</li>
+                  <li>Map embed and tap-to-call button</li>
+                  <li>Photo-ready layout for your brand</li>
+                  <li>Mobile-optimized for discovery browsing</li>
+                </ul>
               </article>
               <article class="offer-card reveal">
                 <h3>Internal tools</h3>
-                <p>When spreadsheets stop scaling, I can build the system your team actually uses every day.</p>
+                <p>For businesses where spreadsheets and manual processes have started causing real problems.</p>
+                <ul>
+                  <li>Custom dashboard or data entry interface</li>
+                  <li>Inventory, orders, or workflow tracking</li>
+                  <li>Role-based access and user management</li>
+                  <li>Built for daily operational use, not demos</li>
+                </ul>
               </article>
             </div>
           </div>
@@ -255,9 +318,9 @@
               </div>
               <div class="benefits-pillars">
                 <div class="pillar-item">
-                  <h3>Mobile-first by default</h3>
-                  <p>Over 70% of local customers browse from a phone. Your pages are engineered for fast mobile reading, instant tap-to-call, and thumb-friendly navigation.</p>
-                </div>
+                    <h3>Mobile-first by default</h3>
+                    <p>Many customers will check your business from their phone before they call or visit. Every page is built for fast mobile reading, easy tap-to-call, and thumb-friendly navigation.</p>
+                  </div>
                 <div class="pillar-item">
                   <h3>Direct turnaround</h3>
                   <p>Clear milestones and direct communication. Launches happen in 2 to 4 weeks with no mystery delays or layers of account managers.</p>
@@ -290,7 +353,6 @@
                 <a class="button button-secondary button-full" href="#contact">Start with this</a>
               </article>
               <article class="price-card price-card-featured reveal">
-                <p class="price-badge">Most booked</p>
                 <p class="price-name">Business</p>
                 <p class="price-amount">$599</p>
                 <p class="price-note">A full small-business site</p>
@@ -316,7 +378,7 @@
               </article>
             </div>
             <div class="pricing-guarantee reveal">
-              <p><span>✓</span> Every project includes 14 days of post-launch support, mobile optimization, and zero monthly agency lock-in.</p>
+              <p><span>✓</span> Every project includes 14 days of post-launch support covering bugs and issues related to the delivered work, mobile optimization, and zero monthly agency lock-in.</p>
             </div>
           </div>
         </section>
@@ -369,12 +431,18 @@
                 <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
               </label>
               <label>
-                <span>Business type</span>
-                <input type="text" name="business" placeholder="Café, clinic, contractor…" />
+                <span>What type of project?</span>
+                <select name="project_type">
+                  <option value="" disabled selected>Select a project type…</option>
+                  <option value="New website">New website</option>
+                  <option value="Website redesign">Website redesign</option>
+                  <option value="Custom / internal tool">Custom / internal tool</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
               </label>
               <label>
-                <span>What do you need?</span>
-                <textarea name="message" rows="5" placeholder="A new site, a rebuild, or an internal tool…" required></textarea>
+                <span>Tell me about your business and what you need</span>
+                <textarea name="message" rows="5" placeholder="What your business does, who you want to reach, and what's currently missing…" required></textarea>
               </label>
               <label class="consent">
                 <input type="checkbox" name="consent" required />
@@ -392,10 +460,11 @@
           <div class="footer-grid">
             <div>
               <p class="footer-brand">nsz</p>
-              <p>Websites and internal tools for small businesses and service teams. Designed &amp; built by nsz — working with clients across the US &amp; worldwide.</p>
+              <p>Websites and internal tools for small businesses and service teams. Based in the Philippines and open to projects worldwide.</p>
             </div>
             <nav class="footer-col" aria-label="Explore">
               <p class="footer-label">Explore</p>
+              <a href="#about">About</a>
               <a href="#work">Work</a>
               <a href="naturasi.html">NaturasiMIS</a>
               <a href="naturasi-website.html">Naturasì Brand Site</a>
@@ -408,6 +477,7 @@
               <a href="privacy.html">Privacy Policy</a>
               <a href="terms.html">Terms of Service</a>
               <a href="mailto:naszjeighallensaguid@gmail.com">Email</a>
+              <a href="https://www.linkedin.com/in/nasz-jeigh-allen-saguid-150aa339a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </nav>
           </div>
           <div class="footer-bottom">

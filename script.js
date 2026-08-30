@@ -156,67 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 (function () {
-  const modal = document.getElementById('projectModal');
-  if (!modal) return;
-
-  const closeBtn = document.getElementById('modalClose');
-  const modalImage = document.getElementById('modalImage');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDescription = document.getElementById('modalDescription');
-  const modalStatus = document.getElementById('modalStatus');
-  const modalTools = document.getElementById('modalTools');
-  const modalLiveLink = document.getElementById('modalLiveLink');
-
-  function openModal(card) {
-    modalImage.src = card.dataset.image || '';
-    modalImage.alt = card.dataset.title || '';
-    modalTitle.textContent = card.dataset.title || '';
-    modalDescription.textContent = card.dataset.description || '';
-    modalStatus.textContent = card.dataset.status || '';
-    modalTools.textContent = card.dataset.tools || '';
-
-    const url = card.dataset.url || '';
-    if (url) {
-      modalLiveLink.href = url;
-      modalLiveLink.style.display = 'inline-flex';
-    } else {
-      modalLiveLink.removeAttribute('href');
-      modalLiveLink.style.display = 'none';
-    }
-
-    modal.classList.add('is-open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    closeBtn.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove('is-open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.case-study').forEach((card) => {
-    if (!card.dataset.title) return;
-    card.addEventListener('click', () => openModal(card));
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openModal(card);
-      }
-    });
-  });
-
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-  });
-})();
-
-(function () {
   const lightbox = document.getElementById('shotLightbox');
   if (!lightbox) return;
 
